@@ -1,0 +1,20 @@
+{
+    "name": "gilberg-vrn/php-morfologik",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Emelyanov",
+            "email": "gilberg.vrn@gmail.com"
+        }
+    ],
+    "description": "Pure PHP port of morfologik stemming algorithm",
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "morfologik\\": "src/"
+        }
+    }
+}
