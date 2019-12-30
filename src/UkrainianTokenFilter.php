@@ -15,11 +15,14 @@ use ftIndex\analyses\TokenStream;
 class UkrainianTokenFilter
     extends MorfologikFilter
 {
-    
+    public static $dict;
 
     public function __construct($input)
     {
-        $dict = Dictionary::read(__DIR__ . '/stemming/ukrainian/ukrainian.dict');
-        parent::__construct($input, $dict);
+        if (self::$dict === null) {
+            self::$dict = Dictionary::read(__DIR__ . '/stemming/ukrainian/ukrainian.dict');
+        }
+
+        parent::__construct($input, self::$dict);
     }
 }
